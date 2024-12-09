@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+
+/* Hero Section */
+.hero {
+    
+    
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 30px;
+    background-color: #fff;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Team Section */
+.team {
+    background-color: #f9f9f9;
+    padding: 60px 30px;
+}
+
+.team .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-member {
+    width: 250px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer .social-links a:hover {
+    color: #f39c12;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .about .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+
+    .team-members {
+        flex-direction: column;
+    }
+
+    .team-member {
+        margin-bottom: 30px;
+    }
+}

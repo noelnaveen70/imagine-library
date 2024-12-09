@@ -1,0 +1,117 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a global font and background color */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container with a flex layout and responsive behavior */
+.container {
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style for each box */
+.box {
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for boxes */
+.box:hover {
+    transform: translateY(-10px); /* Slight lift */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Style for the images inside the boxes */
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.box:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Style for the links inside the boxes */
+.box a {
+    
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent blue background */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for links */
+.box a:hover {
+    background-color: #007bff; /* Solid blue on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Responsive design: Adjust layout on smaller screens */
+
+.background-clip{
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (max-width: 768px) {
+    .container {
+        gap: 15px;
+    }
+    .box {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        gap: 10px;
+    }
+    .box {
+        width: 150px;
+    }
+}
+
+@media(min-aspect-ratio:16/9){
+    .background-clip{
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+    
+}
